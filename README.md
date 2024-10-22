@@ -12,3 +12,14 @@ This is a **boilerplate** for developing **Telegram Mini Apps** using **React**,
 - **Navigation**: Implemented navigation that is extended to fit the requirements of Telegram Mini Apps.
 - **Telegram-specific Normalization**: Added CSS normalization to ensure the app works smoothly inside the Telegram environment.
 
+## Getting Started
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/ynikalnui/react-tma-boilerplate.git
+   cd react-tma-boilerplate
+
+## More Information
+
+For more detailed information on how to work with Telegram Mini Apps, you can refer to the official documentation:
+- [Telegram Mini Apps Documentation](https://docs.telegram-mini-apps.com/)
