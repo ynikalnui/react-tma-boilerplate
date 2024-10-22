@@ -9,6 +9,6 @@ This is a **boilerplate** for developing **Telegram Mini Apps** using **React**,
 - **Bug Fixes**: Resolved some annoying bugs that are often encountered in Telegram Mini Apps:
   - **Scroll Bug**: Prevents the app from closing unexpectedly when you scroll to the bottom and then back to the top.
   - **Screen Size Handling**: Fixes issues with incorrect screen size detection that could cause layout problems, such as elements not extending as expected.
-- **Navigation**: Simple navigation structure for seamless page transitions.
+- **Navigation**: Implemented navigation that is extended to fit the requirements of Telegram Mini Apps.
 - **Telegram-specific Normalization**: Added CSS normalization to ensure the app works smoothly inside the Telegram environment.
 
