@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/errorboundary.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/_global/footer/index.tsx","./src/components/_global/header/index.tsx","./src/providers/telegramprovider.tsx","./src/providers/index.tsx","./src/views/homepage.tsx"],"version":"5.6.3"}

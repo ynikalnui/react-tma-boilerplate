@@ -1,0 +1,25 @@
+@import './normalization.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base { 
+    .app {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        height: var(--tg-viewport-stable-height, 100vh);
+        max-height: 100vh;
+        background-color: var(--primary-bg-color);
+        overflow: hidden;
+    }
+      
+    .app__content {
+        flex: 1;
+        overflow-y: auto;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+    }
+}
