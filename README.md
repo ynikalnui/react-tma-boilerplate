@@ -1,50 +1,14 @@
 # Telegram Mini App Boilerplate (React + VITE + TypeScript + TailwindCSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **boilerplate** for developing **Telegram Mini Apps** using **React**, **Vite**, **TypeScript**, and **TailwindCSS**. It aims to provide a solid foundation to kickstart your project by solving common issues and integrating useful features specific to Telegram Mini App development.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React + Vite + TypeScript**: Enjoy fast development with modern React features, type safety with TypeScript, and blazing-fast builds with Vite.
+- **TailwindCSS**: Utility-first CSS framework for quick and responsive UI design.
+- **Bug Fixes**: Resolved some annoying bugs that are often encountered in Telegram Mini Apps:
+  - **Scroll Bug**: Prevents the app from closing unexpectedly when you scroll to the bottom and then back to the top.
+  - **Screen Size Handling**: Fixes issues with incorrect screen size detection that could cause layout problems, such as elements not extending as expected.
+- **Navigation**: Simple navigation structure for seamless page transitions.
+- **Telegram-specific Normalization**: Added CSS normalization to ensure the app works smoothly inside the Telegram environment.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
