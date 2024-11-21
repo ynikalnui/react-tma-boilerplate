@@ -1,22 +1,12 @@
-import { 
-    bindViewportCSSVars, 
+import {
     initMiniApp, 
-    initSwipeBehavior, 
-    useViewport 
+    initSwipeBehavior
 } from "@telegram-apps/sdk-react";
 import { ReactNode, useEffect } from "react";
 
 export default function TelegramProvider({ children }: { children: ReactNode }) {
-    const viewport = useViewport()
     const [swipeBehavior] = initSwipeBehavior()
     const [miniApp] = initMiniApp();
-
-    // rebinding vewport vars on window resize
-    useEffect(() => {
-        if (viewport) {
-          return bindViewportCSSVars(viewport);
-        }
-    }, [viewport]);
 
     // disabling swipe-to-close feature if app content is scrollable
     useEffect(() => {

@@ -12,16 +12,8 @@ html, body, #root {
     overflow: hidden;
 }
 
-#root {
-    height: 100%;
-}
-
 html, body {
     background-color: var(--primary-bg-color);
-    position: fixed;
-    inset: 0;
-    height: var(--tg-viewport-stable-height, 100vh);
-    max-height: 100vh;
 }
 
 a {
