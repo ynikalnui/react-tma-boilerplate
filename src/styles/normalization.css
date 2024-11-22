@@ -12,8 +12,12 @@ html, body, #root {
     overflow: hidden;
 }
 
+#root {
+    height: 100%;
+}
+
 html, body {
-    background-color: var(--primary-bg-color);
+    min-height: 100vh;
 }
 
 a {
