@@ -1,44 +1,23 @@
 import {
     initMiniApp, 
-    initSwipeBehavior
+    initSwipeBehavior,
+    useViewport
 } from "@telegram-apps/sdk-react";
 import { ReactNode, useEffect } from "react";
 
 export default function TelegramProvider({ children }: { children: ReactNode }) {
-    const [swipeBehavior] = initSwipeBehavior()
     const [miniApp] = initMiniApp();
+    const [swipeBehavior] = initSwipeBehavior();
+    const viewport = useViewport()
 
-    // disabling swipe-to-close feature if app content is scrollable
+    // drag to close feature disabled
     useEffect(() => {
-        const appContent = document.querySelector('.app__content');
-
-        if (!appContent || !(appContent instanceof HTMLElement)) return;
-
-        const isScrollable = () => {
-            return appContent.scrollHeight > appContent.clientHeight;
-        };
-
-        const handleTouchStart = (e: TouchEvent) => {
-            if (appContent.contains(e.target as Node) && isScrollable()) {
-                swipeBehavior.disableVerticalSwipe();
-            } else {
-                swipeBehavior.enableVerticalSwipe();
-            }
-        };
-
-        const handleTouchEnd = () => {
-            swipeBehavior.enableVerticalSwipe();
-        };
-
-        document.addEventListener('touchstart', handleTouchStart, { passive: false });
-        document.addEventListener('touchend', handleTouchEnd, { passive: false });
-
-        return () => {
-            document.removeEventListener('touchstart', handleTouchStart);
-            document.removeEventListener('touchend', handleTouchEnd);
-        };
-    }, [swipeBehavior]);
-
+        if (viewport) {
+            viewport.expand();
+        }
+        swipeBehavior.disableVerticalSwipe();
+    }, []);
+    
     // setting mini app colors to default page colors
     useEffect(() => {
         miniApp.setHeaderColor('#000000')

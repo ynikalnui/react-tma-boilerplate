@@ -6,14 +6,17 @@
 
 @layer base { 
     .app {
-        min-height: 100vh;
         position: relative;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
       
     .app__content {
+        display: flex;
+        flex-direction: column;
         flex: 1;
+        overflow-y: auto;
     }
 }

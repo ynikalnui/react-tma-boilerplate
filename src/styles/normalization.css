@@ -6,18 +6,12 @@
     user-select: none;
 }
 
-html, body, #root {
+html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-
-#root {
     height: 100%;
-}
-
-html, body {
-    min-height: 100vh;
+    -webkit-overflow-scrolling: auto;
 }
 
 a {
