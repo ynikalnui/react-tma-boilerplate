@@ -14,6 +14,10 @@ html, body {
     -webkit-overflow-scrolling: auto;
 }
 
+#root {
+    height:100%;
+}
+
 a {
     text-decoration: none;
 }
